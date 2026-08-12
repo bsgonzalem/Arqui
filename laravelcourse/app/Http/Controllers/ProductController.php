@@ -47,15 +47,13 @@ class ProductController extends Controller
 
             "name" => "required",
 
-            "price" => "required"
-
+            "price" => "required|integer|gt:0"
         ]);
-
-        dd($request->all());
-
-        //here will be the code to call the model and save it to the database 
-
+        return view("product.success");
     }
+
+
+
     public function show(string $id): View | RedirectResponse
     {
 

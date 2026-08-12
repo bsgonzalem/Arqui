@@ -35,3 +35,6 @@ Route::post('/products/save', 'App\Http\Controllers\ProductController@save')
 
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')
     ->name("product.show");
+
+Route::get('/products/success', 'App\Http\Controllers\ProductController@success')
+    ->name("product.success");

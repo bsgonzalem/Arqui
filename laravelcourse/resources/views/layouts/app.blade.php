@@ -46,6 +46,9 @@
 
                     <a class ="nav-link active" href="{{ route('home.contact') }}">Contact</a>
 
+                    <a class ="nav-link active" href="{{ route('product.create') }}">Create Product</a>
+
+
                 </div>
 
             </div>
