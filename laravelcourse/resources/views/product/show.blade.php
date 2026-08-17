@@ -20,17 +20,26 @@
 
             <div class="card-body">
 
-                @if ($viewData["product"]["price"]> 80)
-                    <h5 class="text-danger">
-                        {{ $viewData["product"]["name"] }}
-                    </h5>
-                    @else
-                    <h5>
-                        {{ $viewData["product"]["name"] }}
-                    </h5>
-                    @endif
-                    <p class="card-text">{{ $viewData["product"]["description"]}}</p>
-                    <p class="card-text"> {{$viewData["product"]["price"]}}</p>
+                @if ($viewData["product"]["price"] > 80)
+                <h5 class="text-danger">
+                    {{ $viewData["product"]["name"] }}
+                </h5>
+                @else
+                <h5>
+                    {{ $viewData["product"]["name"] }}
+                </h5>
+                @endif
+
+                <p class="card-text">
+                    {{ $viewData["product"]["description"] }}
+                </p>
+
+                <p class="card-text">
+                    {{ $viewData["product"]["price"] }}
+                </p>
+                @foreach($viewData["product"]->comments as $comment)
+                - {{ $comment->getDescription() }}<br />
+                @endforeach
             </div>
 
         </div>

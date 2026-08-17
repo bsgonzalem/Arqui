@@ -2,39 +2,41 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
 Route::get('/about', function () {
 
-    $data1 = "About us - Online Store";
+    $data1 = 'About us - Online Store';
 
-    $data2 = "About us";
+    $data2 = 'About us';
 
-    $description = "This is an about page ...";
+    $description = 'This is an about page ...';
 
-    $author = "Developed by: Your Name";
+    $author = 'Developed by: Your Name';
 
-    return view('home.about')->with("title", $data1)
+    return view('home.about')->with('title', $data1)
 
-        ->with("subtitle", $data2)
+        ->with('subtitle', $data2)
 
-        ->with("description", $description)
+        ->with('description', $description)
 
-        ->with("author", $author);
-})->name("home.about");
+        ->with('author', $author);
+})->name('home.about');
 
-Route::get('/contact', 'App\Http\Controllers\HomeController@contact')->name("home.contact");
+Route::get('/contact', 'App\Http\Controllers\HomeController@contact')->name('home.contact');
 
 Route::get('/products', 'App\Http\Controllers\ProductController@index')
-    ->name("product.index");
+    ->name('product.index');
 
 Route::get('/products/create', 'App\Http\Controllers\ProductController@create')
-    ->name("product.create");
+    ->name('product.create');
 
 Route::post('/products/save', 'App\Http\Controllers\ProductController@save')
-    ->name("product.save");
+    ->name('product.save');
 
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')
-    ->name("product.show");
+    ->name('product.show');
 
 Route::get('/products/success', 'App\Http\Controllers\ProductController@success')
-    ->name("product.success");
+    ->name('product.success');
+
+Auth::routes();
