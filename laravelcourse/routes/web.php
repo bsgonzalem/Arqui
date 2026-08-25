@@ -42,4 +42,10 @@ Route::get('/image-not-di', 'App\Http\Controllers\ImageNotDIController@index')->
 
 Route::post('/image-not-di/save', 'App\Http\Controllers\ImageNotDIController@save')->name('imagenotdi.save');
 
+Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
+
+Route::get('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("cart.add");
+
+Route::get('/cart/removeAll/', 'App\Http\Controllers\CartController@removeAll')->name("cart.removeAll");
+
 Auth::routes();
