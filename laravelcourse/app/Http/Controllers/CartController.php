@@ -1,17 +1,12 @@
 <?php
 
-
-
 namespace App\Http\Controllers;
-
-
 
 use Illuminate\Http\RedirectResponse;
 
 use Illuminate\Http\Request;
 
 use Illuminate\View\View;
-
 
 
 class CartController extends Controller
@@ -27,7 +22,6 @@ class CartController extends Controller
         $products[121] = ['name' => 'Tv samsung', 'price' => '1000'];
 
         $products[11] = ['name' => 'Iphone', 'price' => '2000'];
-
 
 
         $cartProducts = [];
