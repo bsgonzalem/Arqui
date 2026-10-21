@@ -12,7 +12,7 @@
 
             <div class="card">
 
-                <div class="card-header">Create product</div>
+                <div class="card-header">Crear Producto </div>
 
                 <div class="card-body">
 
